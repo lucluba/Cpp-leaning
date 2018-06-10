@@ -22,4 +22,6 @@ int main() {
     {
         cout << " PIN is incorrect";
     }
+    
+    return 0;
 }
