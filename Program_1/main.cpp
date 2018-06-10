@@ -19,6 +19,7 @@ int main ()
 
     cout << "Every child will get " << x << " sweets";
     cout << endl << y << " sweets will remain for Mark";
-
+	
+	return 0;
 }
 
