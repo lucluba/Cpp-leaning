@@ -1,0 +1,27 @@
+Anna
+Kowalska
+6
+Kasia
+Nowak
+7
+Jan
+Kowalski
+33
+Zuzia Maria
+Nowak
+21
+Jozef
+Sikorski
+13
+Katarzyna
+Sikorska
+1
+Robert
+Lewandowski
+9
+Fryderyk
+Chopin
+18
+Andrzej
+Sapkowski
+6
