@@ -14,7 +14,8 @@ int fav_num_array[20];
 int main()
 {
     cout << "Do you want to display contact data from file? y/n: ";
-    answer=getchar();
+    answer = getchar();
+    answer = tolower(answer);
 
     switch(answer)
     {
