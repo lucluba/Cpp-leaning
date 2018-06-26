@@ -1,8 +1,9 @@
-// Fibonacci numbers program - on pointers
+// Fibonacci numbers program - arrays vs pointers
 
 #include <iostream>
 #include <time.h>
 #include <cstdlib>
+#include <stdio.h>
 
 using namespace std;
 
@@ -15,11 +16,12 @@ int main ()
     cout << "Type how many Fibonacci numbers you want to display: ";
     cin >> num;
 
-    double table[num];
+    long double table[num];
 
     cout<<"Table without pointer: "<<endl;
 
     start = clock();
+
     table[0] = table[1] = 1;
 
     cout<< table[0]<< " , " << table[1] << " , ";
@@ -34,31 +36,34 @@ int main ()
 
     cout << endl << "Time without pointer: " << speed << endl;
 
+//    delete [] table;
+
     cout << endl << "_______________________________" << endl << endl;
 
-    double *fibonacci;
-    fibonacci = new double [num];
+    long double *pointer = table;
+    pointer = new long double [num];
 
     start = clock();
-    *fibonacci = 1;
-    cout << *fibonacci <<" , ";
-    fibonacci++;
-    *fibonacci = 1;
-    cout << *fibonacci << " , ";
-    fibonacci++;
+
+    for (int k=0; k<2; k++)
+    {
+        *pointer = 1;
+        cout << *pointer << " , ";
+        pointer++;
+    }
 
     for (int k=2; k<num; k++)
     {
-        *fibonacci = *(fibonacci-1) + *(fibonacci-2);
-        cout<< *fibonacci << " , ";
-        fibonacci++;
+        *pointer = *(pointer-2) + *(pointer-1);
+        cout << *pointer << " , ";
+        pointer++;
     }
     stop = clock();
     speed = (double)(stop - start) / CLOCKS_PER_SEC;
 
     cout << endl << "Time with pointer: " << speed << endl;
 
-    delete [] fibonacci;
+//    delete [] table;
 
     getchar(); getchar();
     return 0;
