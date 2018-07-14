@@ -9,7 +9,7 @@ int choice, number;
 float grade, ects;
 float sum = 0, denominator = 0, mean;
 
-float grade_list (int &number);
+float grade_list (int &row);
 
 int main()
 {
