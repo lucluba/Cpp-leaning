@@ -15,9 +15,13 @@ int main ()
     float* table = new float[number];
     float* pos = table;
 
-    cout << "Type your numbers using spacebar as separator: " << endl;
+    cout << "Type your numbers using enter as separator: " << endl;
 
     for (int i=0; i < number; i++){
+        if (i == number-1)
+        {
+            cout << "It's your last number: ";
+        }
         cin >> *pos;
         pos++;
     }
